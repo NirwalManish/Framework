@@ -19,14 +19,15 @@
   "author": "RahulShetty",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.4",
+    "cypress": "^13.16.1",
     "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3",
     "multiple-cucumber-html-reporter": "^3.0.1"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "@cypress/browserify-preprocessor": "latest"
   }
 }
-
