@@ -15,7 +15,7 @@ describe("My framework test", function () {
         const homePage = new HomePage();
         const productPage = new ProductPage();
 
-        cy.visit("https://rahulshettyacademy.com/angularpractice/");
+        cy.visit(Cypress.env('url')+"/angularpractice/");
 
         homePage.getEditBox().type(this.data.name);
         homePage.getGender().select(this.data.gender);
@@ -30,21 +30,14 @@ describe("My framework test", function () {
             cy.selectProduct(element);
         })
         
-
-        homePage.checkoutButton().click();
+        productPage.getcheckoutButton().click();
         cy.contains('Checkout').click();
         cy.get('#country').type('India');
         cy.get('.suggestions > ui > li > a').click();
         cy.get('#checkbox2').click({force: true});
 
         cy.get('input[type = "submit"]').click();
-        cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :')
-
-
-
-
-
-
+        cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :');
 
     })
 })

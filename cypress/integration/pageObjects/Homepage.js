@@ -26,10 +26,7 @@ class HomePage
         return cy.get(':nth-child(2) > .nav-link');
     }
 
-    getcheckoutButton()
-    {
-    return cy.get('#navbarResponsive > .navbar-nav > .nav-item > .nav-link');
-    }
+    
 }
 
 export default HomePage;
